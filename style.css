@@ -1,0 +1,34 @@
+#gameDiv {
+    font-family: cursive, sans-serif;
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: lightgrey;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 900px;
+}
+
+.choiceBtn {
+    line-height: 30px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    color: rgb(46, 43, 226);
+    font-size: bolder;
+}
+
+#playerText {
+    color: blueviolet;
+}
+
+#computerText {
+    color: red;
+}
+
+#resultText {
+    color: green;
+}
