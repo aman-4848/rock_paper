@@ -8,13 +8,13 @@ function checkWinner(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "draw";
     } else if (
-        (playerSelection === "rock" && computerSelection === "scissors") ||
-        (playerSelection === "scissors" && computerSelection === "paper") ||
-        (playerSelection === "paper" && computerSelection === "rock")
+        (computerSelection === "rock" && playerSelection === "scissors") ||
+        (computerSelection === "scissors" && playerSelection === "paper") ||
+        (computerSelection === "paper" && playerSelection === "rock")
     ) {
-        return "player";
-    } else {
         return "computer";
+    } else {
+        return "player";
     }
 }
 
@@ -25,7 +25,7 @@ function makeChoice(playerSelection) {
     const computerSelection = getComputerChoice();
     const winner = checkWinner(playerSelection, computerSelection);
 
-    if (winner === "placer") {
+    if (winner === "player") {
         scorePlayer++;
         document.getElementById("resultText").innerText = `You win! ${playerSelection} beats ${computerSelection}`;
     } else if (winner === "computer") {
